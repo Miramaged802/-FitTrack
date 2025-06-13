@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="900" height="1600" xmlns="http://www.w3.org/2000/svg">
+  <title>Wellness Platform Use Case Diagram</title>
+  <style>
+    .title { font-family: Arial; font-size: 22px; font-weight: bold; }
+    .subtitle { font-family: Arial; font-size: 16px; font-style: italic; }
+    .actor { font-family: Arial; font-size: 14px; }
+    .usecase { font-family: Arial; font-size: 12px; }
+    .system { font-family: Arial; font-size: 16px; font-weight: bold; }
+    .subsystem { font-family: Arial; font-size: 14px; font-style: italic; }
+    .note { font-family: Arial; font-size: 10px; font-style: italic; }
+    .include { font-family: Arial; font-size: 10px; font-style: italic; }
+    .extend { font-family: Arial; font-size: 10px; font-style: italic; }
+  </style>
+  
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" class="title">Wellness Platform - Use Case Diagram</text>
+  <text x="450" y="55" text-anchor="middle" class="subtitle">Complete System Overview</text>
+  
+  <!-- Main System Boundary -->
+  <rect x="150" y="80" width="600" height="1450" stroke="black" fill="white" stroke-dasharray="5,5"/>
+  <text x="170" y="105" class="system">Wellness Platform</text>
+  
+  <!-- Actors -->
+  <!-- Regular User -->
+  <circle cx="80" cy="250" r="10" stroke="black" fill="white"/>
+  <line x1="80" y1="260" x2="80" y2="290" stroke="black"/>
+  <line x1="60" y1="270" x2="100" y2="270" stroke="black"/>
+  <line x1="80" y1="290" x2="60" y2="310" stroke="black"/>
+  <line x1="80" y1="290" x2="100" y2="310" stroke="black"/>
+  <text x="80" y="330" text-anchor="middle" class="actor">User</text>
+  
+  <!-- Premium User -->
+  <circle cx="80" cy="600" r="10" stroke="black" fill="white"/>
+  <line x1="80" y1="610" x2="80" y2="640" stroke="black"/>
+  <line x1="60" y1="620" x2="100" y2="620" stroke="black"/>
+  <line x1="80" y1="640" x2="60" y2="660" stroke="black"/>
+  <line x1="80" y1="640" x2="100" y2="660" stroke="black"/>
+  <text x="80" y="680" text-anchor="middle" class="actor">Premium User</text>
+  
+  <!-- Coach/Trainer -->
+  <circle cx="80" cy="950" r="10" stroke="black" fill="white"/>
+  <line x1="80" y1="960" x2="80" y2="990" stroke="black"/>
+  <line x1="60" y1="970" x2="100" y2="970" stroke="black"/>
+  <line x1="80" y1="990" x2="60" y2="1010" stroke="black"/>
+  <line x1="80" y1="990" x2="100" y2="1010" stroke="black"/>
+  <text x="80" y="1030" text-anchor="middle" class="actor">Coach/Trainer</text>
+  
+  <!-- Admin -->
+  <circle cx="80" cy="1300" r="10" stroke="black" fill="white"/>
+  <line x1="80" y1="1310" x2="80" y2="1340" stroke="black"/>
+  <line x1="60" y1="1320" x2="100" y2="1320" stroke="black"/>
+  <line x1="80" y1="1340" x2="60" y2="1360" stroke="black"/>
+  <line x1="80" y1="1340" x2="100" y2="1360" stroke="black"/>
+  <text x="80" y="1380" text-anchor="middle" class="actor">Admin</text>
+  
+  <!-- External System -->
+  <rect x="800" y="600" width="80" height="40" stroke="black" fill="white"/>
+  <text x="840" y="625" text-anchor="middle" class="actor">External APIs</text>
+  
+  <!-- Authentication Subsystem -->
+  <rect x="180" y="120" width="540" height="100" stroke="black" fill="white" stroke-dasharray="3,3"/>
+  <text x="200" y="140" class="subsystem">Authentication Subsystem</text>
+  
+  <ellipse cx="300" cy="170" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="300" y="175" text-anchor="middle" class="usecase">Login</text>
+  
+  <ellipse cx="450" cy="170" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="450" y="175" text-anchor="middle" class="usecase">Register</text>
+  
+  <ellipse cx="600" cy="170" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="600" y="175" text-anchor="middle" class="usecase">Manage Profile</text>
+  
+  <!-- Sleep Tracking Subsystem -->
+  <rect x="180" y="240" width="250" height="180" stroke="black" fill="white" stroke-dasharray="3,3"/>
+  <text x="200" y="260" class="subsystem">Sleep Tracking</text>
+  
+  <ellipse cx="300" cy="300" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="300" y="305" text-anchor="middle" class="usecase">Log Sleep Data</text>
+  
+  <ellipse cx="300" cy="360" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="300" y="365" text-anchor="middle" class="usecase">View Sleep Insights</text>
+  
+  <ellipse cx="300" cy="420" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="300" y="425" text-anchor="middle" class="usecase">Get Sleep Coaching</text>
+  
+  <!-- Mood Tracking Subsystem -->
+  <rect x="450" y="240" width="250" height="180" stroke="black" fill="white" stroke-dasharray="3,3"/>
+  <text x="470" y="260" class="subsystem">Mood Tracking</text>
+  
+  <ellipse cx="575" cy="300" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="575" y="305" text-anchor="middle" class="usecase">Log Mood Entry</text>
+  
+  <ellipse cx="575" cy="360" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="575" y="365" text-anchor="middle" class="usecase">View Mood Journal</text>
+  
+  <ellipse cx="575" cy="420" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="575" y="425" text-anchor="middle" class="usecase">Practice Mindfulness</text>
+  
+  <!-- Workout Subsystem -->
+  <rect x="180" y="440" width="250" height="240" stroke="black" fill="white" stroke-dasharray="3,3"/>
+  <text x="200" y="460" class="subsystem">Workout Management</text>
+  
+  <ellipse cx="300" cy="500" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="300" y="505" text-anchor="middle" class="usecase">Log Workout</text>
+  
+  <ellipse cx="300" cy="560" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="300" y="565" text-anchor="middle" class="usecase">View Analytics</text>
+  
+  <ellipse cx="300" cy="620" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="300" y="625" text-anchor="middle" class="usecase">Use Templates</text>
+  
+  <ellipse cx="300" cy="680" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="300" y="685" text-anchor="middle" class="usecase">Share Progress</text>
+  
+  <!-- Nutrition Subsystem -->
+  <rect x="450" y="440" width="250" height="180" stroke="black" fill="white" stroke-dasharray="3,3"/>
+  <text x="470" y="460" class="subsystem">Nutrition Tracking</text>
+  
+  <ellipse cx="575" cy="500" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="575" y="505" text-anchor="middle" class="usecase">Log Meals</text>
+  
+  <ellipse cx="575" cy="560" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="575" y="565" text-anchor="middle" class="usecase">View Recipes</text>
+  
+  <ellipse cx="575" cy="620" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="575" y="625" text-anchor="middle" class="usecase">Track Nutrition</text>
+  
+  <!-- Goal Setting Subsystem -->
+  <rect x="180" y="700" width="250" height="120" stroke="black" fill="white" stroke-dasharray="3,3"/>
+  <text x="200" y="720" class="subsystem">Goal Setting</text>
+  
+  <ellipse cx="300" cy="760" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="300" y="765" text-anchor="middle" class="usecase">Set Goals</text>
+  
+  <ellipse cx="300" cy="820" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="300" y="825" text-anchor="middle" class="usecase">Track Progress</text>
+  
+  <!-- Community Features -->
+  <rect x="450" y="700" width="250" height="180" stroke="black" fill="white" stroke-dasharray="3,3"/>
+  <text x="470" y="720" class="subsystem">Community Features</text>
+  
+  <ellipse cx="575" cy="760" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="575" y="765" text-anchor="middle" class="usecase">Join Community</text>
+  
+  <ellipse cx="575" cy="820" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="575" y="825" text-anchor="middle" class="usecase">View Guides</text>
+  
+  <ellipse cx="575" cy="880" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="575" y="885" text-anchor="middle" class="usecase">Earn Achievements</text>
+  
+  <!-- Coaching Subsystem -->
+  <rect x="180" y="900" width="520" height="120" stroke="black" fill="white" stroke-dasharray="3,3"/>
+  <text x="200" y="920" class="subsystem">Coaching Features</text>
+  
+  <ellipse cx="300" cy="960" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="300" y="965" text-anchor="middle" class="usecase">Create Workout Plans</text>
+  
+  <ellipse cx="450" cy="960" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="450" y="965" text-anchor="middle" class="usecase">Monitor Clients</text>
+  
+  <ellipse cx="600" cy="960" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="600" y="965" text-anchor="middle" class="usecase">Provide Feedback</text>
+  
+  <!-- Reporting and Analytics -->
+  <rect x="180" y="1040" width="520" height="120" stroke="black" fill="white" stroke-dasharray="3,3"/>
+  <text x="200" y="1060" class="subsystem">Reporting and Analytics</text>
+  
+  <ellipse cx="300" cy="1100" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="300" y="1105" text-anchor="middle" class="usecase">View Reports</text>
+  
+  <ellipse cx="450" cy="1100" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="450" y="1105" text-anchor="middle" class="usecase">Export Data</text>
+  
+  <ellipse cx="600" cy="1100" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="600" y="1105" text-anchor="middle" class="usecase">Track Performance</text>
+  
+  <!-- Settings and Preferences -->
+  <rect x="180" y="1180" width="520" height="120" stroke="black" fill="white" stroke-dasharray="3,3"/>
+  <text x="200" y="1200" class="subsystem">Settings and Preferences</text>
+  
+  <ellipse cx="300" cy="1240" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="300" y="1245" text-anchor="middle" class="usecase">Manage Settings</text>
+  
+  <ellipse cx="450" cy="1240" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="450" y="1245" text-anchor="middle" class="usecase">Set Reminders</text>
+  
+  <ellipse cx="600" cy="1240" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="600" y="1245" text-anchor="middle" class="usecase">Toggle Dark Mode</text>
+  
+  <!-- Admin Features -->
+  <rect x="180" y="1320" width="520" height="180" stroke="black" fill="white" stroke-dasharray="3,3"/>
+  <text x="200" y="1340" class="subsystem">Administration</text>
+  
+  <ellipse cx="300" cy="1380" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="300" y="1385" text-anchor="middle" class="usecase">Manage Users</text>
+  
+  <ellipse cx="450" cy="1380" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="450" y="1385" text-anchor="middle" class="usecase">Beta Features</text>
+  
+  <ellipse cx="600" cy="1380" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="600" y="1385" text-anchor="middle" class="usecase">System Reports</text>
+  
+  <ellipse cx="300" cy="1440" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="300" y="1445" text-anchor="middle" class="usecase">Manage Devices</text>
+  
+  <ellipse cx="450" cy="1440" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="450" y="1445" text-anchor="middle" class="usecase">View Timeline</text>
+  
+  <ellipse cx="600" cy="1440" rx="60" ry="25" stroke="black" fill="white"/>
+  <text x="600" y="1445" text-anchor="middle" class="usecase">Test Dashboard</text>
+  
+  <!-- Associations - Regular User -->
+  <!-- Auth -->
+  <line x1="100" y1="250" x2="240" y2="170" stroke="black"/>
+  <line x1="100" y1="250" x2="390" y2="170" stroke="black"/>
+  <line x1="100" y1="250" x2="540" y2="170" stroke="black"/>
+  
+  <!-- Sleep -->
+  <line x1="100" y1="250" x2="240" y2="300" stroke="black"/>
+  <line x1="100" y1="250" x2="240" y2="360" stroke="black"/>
+  
+  <!-- Mood -->
+  <line x1="100" y1="250" x2="515" y2="300" stroke="black"/>
+  <line x1="100" y1="250" x2="515" y2="360" stroke="black"/>
+  <line x1="100" y1="250" x2="515" y2="420" stroke="black"/>
+  
+  <!-- Workout -->
+  <line x1="100" y1="270" x2="240" y2="500" stroke="black"/>
+  <line x1="100" y1="270" x2="240" y2="560" stroke="black"/>
+  
+  <!-- Nutrition -->
+  <line x1="100" y1="270" x2="515" y2="500" stroke="black"/>
+  <line x1="100" y1="270" x2="515" y2="560" stroke="black"/>
+  <line x1="100" y1="270" x2="515" y2="620" stroke="black"/>
+  
+  <!-- Goals -->
+  <line x1="100" y1="290" x2="240" y2="760" stroke="black"/>
+  <line x1="100" y1="290" x2="240" y2="820" stroke="black"/>
+  
+  <!-- Community -->
+  <line x1="100" y1="290" x2="515" y2="760" stroke="black"/>
+  <line x1="100" y1="290" x2="515" y2="820" stroke="black"/>
+  
+  <!-- Reports -->
+  <line x1="100" y1="310" x2="240" y2="1100" stroke="black"/>
+  
+  <!-- Settings -->
+  <line x1="100" y1="310" x2="240" y2="1240" stroke="black"/>
+  <line x1="100" y1="310" x2="390" y2="1240" stroke="black"/>
+  <line x1="100" y1="310" x2="540" y2="1240" stroke="black"/>
+  
+  <!-- Premium User Associations -->
+  <line x1="100" y1="600" x2="240" y2="420" stroke="black"/>
+  <line x1="100" y1="600" x2="240" y2="620" stroke="black"/>
+  <line x1="100" y1="600" x2="240" y2="680" stroke="black"/>
+  <line x1="100" y1="600" x2="515" y2="880" stroke="black"/>
+  <line x1="100" y1="600" x2="390" y2="1100" stroke="black"/>
+  <line x1="100" y1="600" x2="540" y2="1100" stroke="black"/>
+  
+  <!-- Coach Associations -->
+  <line x1="100" y1="950" x2="240" y2="960" stroke="black"/>
+  <line x1="100" y1="950" x2="390" y2="960" stroke="black"/>
+  <line x1="100" y1="950" x2="540" y2="960" stroke="black"/>
+  
+  <!-- Admin Associations -->
+  <line x1="100" y1="1300" x2="240" y2="1380" stroke="black"/>
+  <line x1="100" y1="1300" x2="390" y2="1380" stroke="black"/>
+  <line x1="100" y1="1300" x2="540" y2="1380" stroke="black"/>
+  <line x1="100" y1="1300" x2="240" y2="1440" stroke="black"/>
+  <line x1="100" y1="1300" x2="390" y2="1440" stroke="black"/>
+  <line x1="100" y1="1300" x2="540" y2="1440" stroke="black"/>
+  
+  <!-- External System Associations -->
+  <line x1="800" y1="600" x2="635" y2="500" stroke="black"/>
+  <line x1="800" y1="600" x2="635" y2="560" stroke="black"/>
+  <line x1="800" y1="600" x2="635" y2="620" stroke="black"/>
+  <line x1="800" y1="620" x2="360" y2="1100" stroke="black"/>
+  
+  <!-- Footer -->
+  <text x="450" y="1550" text-anchor="middle" class="note">Wellness Platform Complete Use Case Diagram - Generated on 2025-06-11</text>
+</svg>
