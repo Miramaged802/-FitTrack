@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, Mail, Lock, User, Eye, EyeOff } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
@@ -19,6 +19,17 @@ export const AuthWrapper: React.FC<AuthWrapperProps> = ({ children }) => {
     name: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Place ALL hook calls at the top level, before any conditional returns
+  useEffect(() => {
+    if (user) {
+      // If we detect the user is already logged in and on the login page, redirect to dashboard
+      const path = window.location.pathname;
+      if (path === '/login') {
+        window.location.href = '/';
+      }
+    }
+  }, [user]);
 
   if (loading) {
     return (
@@ -120,6 +131,8 @@ export const AuthWrapper: React.FC<AuthWrapperProps> = ({ children }) => {
           }
         } else {
           toast.success('Welcome back!');
+          // Redirect to dashboard after successful login
+          window.location.href = '/';
         }
       }
     } catch (error) {

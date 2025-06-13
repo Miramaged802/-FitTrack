@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { User, Edit, Camera, Award, Activity, Calendar, TrendingUp, Crown, Mail, Phone, MapPin, Heart, Dumbbell, AlertTriangle, Pill, Target, Clock, CheckCircle, Save } from 'lucide-react';
+import { User, Edit, Camera, Award, Activity, Calendar, TrendingUp, Crown, Mail, Phone, MapPin, Heart, Dumbbell, AlertTriangle, Pill, Target, Clock, CheckCircle, Save, LogOut } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
 import { useSubscription } from '../hooks/useSubscription';
 import { DatabaseService } from '../services/database';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 const userStats = [
   { label: 'Days Active', value: '127', icon: Calendar },
@@ -32,7 +33,8 @@ const equipmentOptions = ['None', 'Dumbbells', 'Resistance bands', 'Yoga mat', '
 const fitnessGoals = ['Weight loss', 'Build muscle', 'Improve endurance', 'Increase flexibility', 'Better sleep', 'Stress relief', 'General fitness', 'Athletic performance'];
 
 export const Profile: React.FC = () => {
-  const { user } = useAuth();
+  const { user, signOut } = useAuth();
+  const navigate = useNavigate();
   const { subscription, planName, isPremium } = useSubscription();
   const [isEditing, setIsEditing] = useState(false);
   const [activeTab, setActiveTab] = useState<'basic' | 'health' | 'fitness'>('basic');
@@ -305,14 +307,29 @@ export const Profile: React.FC = () => {
               <span className="font-medium">{planName} Member</span>
             </div>
           )}
-          <button
-            onClick={() => setIsEditing(!isEditing)}
-            disabled={saving}
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center disabled:opacity-50"
-          >
-            <Edit className="h-5 w-5 mr-2" />
-            {isEditing ? 'Cancel' : 'Edit Profile'}
-          </button>
+          <div className="flex space-x-3">
+            <button
+              onClick={() => setIsEditing(!isEditing)}
+              disabled={saving}
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center disabled:opacity-50"
+            >
+              <Edit className="h-5 w-5 mr-2" />
+              {isEditing ? 'Cancel' : 'Edit Profile'}
+            </button>
+            <button
+              onClick={async () => {
+                const { error } = await signOut();
+                if (!error) {
+                  navigate('/login');
+                }
+              }}
+              disabled={saving}
+              className="bg-red-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-red-700 transition-colors flex items-center disabled:opacity-50"
+            >
+              <LogOut className="h-5 w-5 mr-2" />
+              Log Out
+            </button>
+          </div>
         </div>
       </div>
 
